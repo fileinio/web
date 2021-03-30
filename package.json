@@ -1,0 +1,14 @@
+{
+	"name": "filein",
+	"version": "1.0.0",
+	"engines": {
+		"node": "14.16.0"
+	},
+	"scripts": {
+		"start": "node src"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"private": true
+}
