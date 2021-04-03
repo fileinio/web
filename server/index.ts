@@ -1,3 +1,5 @@
+if (process.env.NODE_ENV === 'development') require('dotenv').config()
+
 import express from 'express'
 import { config } from 'aws-sdk'
 

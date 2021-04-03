@@ -5,11 +5,11 @@ import { DEV, ORIGIN } from '../lib/constants'
 
 const router = Router()
 
-router.use(({ headers, url }, res, next) => {
-	DEV || headers['x-forwarded-proto'] === 'https'
-		? next()
-		: res.redirect(301, `https://${headers.host}${url}`)
-})
+// router.use(({ headers, url }, res, next) => {
+// 	DEV || headers['x-forwarded-proto'] === 'https'
+// 		? next()
+// 		: res.redirect(301, `https://${headers.host}${url}`)
+// })
 
 router.use((_req, res, next) => {
 	res.header('Access-Control-Allow-Credentials', 'true')

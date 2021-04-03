@@ -9,7 +9,8 @@
 		"format": "prettier --write .",
 		"dev": "NODE_ENV=development ts-node-dev --project tsconfig.server.json --ignore-watch client-build -- server",
 		"build": "tsc -p tsconfig.server.json",
-		"start": "node server-build"
+		"start": "NODE_ENV=production node server-build",
+		"deploy": "npm run build && npm start"
 	},
 	"dependencies": {
 		"connect-dynamodb": "^2.0.4",
@@ -27,6 +28,7 @@
 		"@types/passport-local": "^1.0.33",
 		"@typescript-eslint/eslint-plugin": "^4.20.0",
 		"@typescript-eslint/parser": "^4.20.0",
+		"dotenv": "^8.2.0",
 		"eslint": "^7.23.0",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-prettier": "^3.3.1",
