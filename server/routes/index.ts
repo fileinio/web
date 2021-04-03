@@ -11,8 +11,4 @@ router.use(session)
 
 router.use(auth)
 
-router.get('/', (_req, res) => {
-	res.send('filein')
-})
-
 export default router
